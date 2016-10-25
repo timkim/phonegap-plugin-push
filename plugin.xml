@@ -77,6 +77,9 @@
     <asset src="src/browser/manifest.json" target="manifest.json"/>
   </platform>
   <platform name="ios">
+    <config-file parent="aps-environment" target="*/Entitlements-Debug.plist">
+              <string>production</string>
+    </config-file>
     <config-file target="config.xml" parent="/*">
       <feature name="PushNotification">
         <param name="ios-package" value="PushPlugin"/>
